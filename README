@@ -1,0 +1,23 @@
+                              automata.pic
+
+This is a set of macros for the pic language designed to draw finite
+state machines (aka automata).  I'm writing these macros during my
+classes of Theory of Computation at the University of Brasília in order
+to take notes and write exercises.  I may add more stuff as I learn more
+about automata.
+
+There is a pdf file with an example.
+
+To use it, include the file automata.pic between the first .PS .PE block:
+{
+	.PS
+	copy "circuit.pic"
+	.PE
+}
+
+BUGS:
+automata.pic can only draw horizontal machines.
+When I need to draw machines with vertical states, I will expand it.
+
+LICENSE:
+Public domain.

@@ -1,0 +1,48 @@
+moveht = 0.5
+movewid = 0.5
+circlerad = 0.2
+
+define State {
+	circle $1
+}
+
+define Final {
+	circle $1
+	circle rad 0.17 at center of last circle
+}
+
+define Arcabove {
+	arc $1 cw from 1/3 of the way between \
+		$2 .ne and $2 .e \
+		to 1/3 of the way between \
+		$3 .nw and $3 .w
+	$4 above at top of last arc
+}
+
+define Arcbelow {
+	arc $1 from 1/3 of the way between \
+		$2 .se and $2 .e \
+		to 1/3 of the way between \
+		$3 .sw and $3 .w
+	$4 below at bottom of last arc
+}
+
+define Selfbelow {
+	circle invis with .n at $1 .s diam (circlerad)
+	arc -> cw from 1/3 of the way between \
+		$1 .se and $1 .s \
+		to 1/3 of the way between \
+		$1 .sw and $1 .s \
+		at last circle
+	$2 above at bottom of last arc
+}
+
+define Selfabove {
+	circle invis with .s at $1 .n diam circlerad
+	arc -> from 1/3 of the way between \
+		$1 .ne and $1 .n \
+		to 1/3 of the way between \
+		$1 .nw and $1 .n \
+		at last circle
+	$2 below at top of last arc
+}
