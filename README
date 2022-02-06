@@ -15,9 +15,5 @@ To use it, include the file automata.pic between the first .PS .PE block:
 	.PE
 }
 
-BUGS:
-automata.pic can only draw horizontal machines.
-When I need to draw machines with vertical states, I will expand it.
-
 LICENSE:
 Public domain.
